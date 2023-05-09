@@ -29,7 +29,7 @@ router.post('/api/v1/users/signIn', [
     // Generate json web token and store on session object
 
     const userJwt = await jwt.sign({
-        _id: existingUser.id,
+        id: existingUser.id,
         email: existingUser.email
     }, process.env.JWT_KEY!)
 
